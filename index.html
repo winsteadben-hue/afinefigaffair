@@ -44,6 +44,16 @@
       font-family: -apple-system, sans-serif;
       font-weight: 600;
     }
+    .nav-link {
+      color: rgba(255,255,255,.75);
+      font-family: -apple-system, sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      transition: color .15s;
+    }
+    .nav-link:hover { color: #fff; }
     .nav-cta {
       background: var(--amber);
       color: #fff;
@@ -329,7 +339,10 @@
 
   <!-- Nav -->
   <nav>
-    <span class="nav-brand">A Fine Fig Affair</span>
+    <div style="display:flex;align-items:center;gap:24px;">
+      <span class="nav-brand">A Fine Fig Affair</span>
+      <a href="about.html" class="nav-link">About the Author</a>
+    </div>
     <a href="https://amzn.to/4yaJIZp" target="_blank" rel="noopener" class="nav-cta">Buy on Amazon</a>
   </nav>
 

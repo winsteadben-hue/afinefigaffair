@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>About the Author — A Fine Fig Affair</title>
+  <meta name="description" content="Meet Teri Viduna, author of A Fine Fig Affair and creator of books that inspire, entertain, and bring people together.">
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --green:      #3a5a40;
+      --green-lt:   #f0f4f1;
+      --purple:     #5c3060;
+      --amber:      #c47c2b;
+      --cream:      #fdf8f2;
+      --ink:        #1e1a18;
+      --muted:      #6b6460;
+      --border:     #e2d9d0;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: Georgia, 'Times New Roman', serif;
+      background: var(--cream);
+      color: var(--ink);
+      line-height: 1.7;
+    }
+
+    /* ── Nav ── */
+    nav {
+      position: sticky; top: 0; z-index: 50;
+      background: var(--green);
+      padding: 14px 24px;
+      display: flex; align-items: center; justify-content: space-between;
+      gap: 16px;
+    }
+    .nav-left {
+      display: flex; align-items: center; gap: 24px;
+    }
+    .nav-brand {
+      color: #fff;
+      font-size: 15px;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      font-family: -apple-system, sans-serif;
+      font-weight: 600;
+      text-decoration: none;
+    }
+    .nav-link {
+      color: rgba(255,255,255,.75);
+      font-family: -apple-system, sans-serif;
+      font-size: 13px;
+      font-weight: 500;
+      text-decoration: none;
+      letter-spacing: 0.04em;
+      transition: color .15s;
+    }
+    .nav-link:hover, .nav-link.active { color: #fff; }
+    .nav-cta {
+      background: var(--amber);
+      color: #fff;
+      text-decoration: none;
+      font-family: -apple-system, sans-serif;
+      font-size: 13px;
+      font-weight: 600;
+      padding: 8px 20px;
+      border-radius: 6px;
+      letter-spacing: 0.04em;
+      transition: opacity .15s;
+      white-space: nowrap;
+    }
+    .nav-cta:hover { opacity: .88; }
+
+    /* ── Page header ── */
+    .page-header {
+      background: linear-gradient(160deg, var(--green) 0%, #2c4a32 100%);
+      padding: 64px 24px 56px;
+      text-align: center;
+      color: #fff;
+    }
+    .page-header .eyebrow {
+      font-family: -apple-system, sans-serif;
+      font-size: 12px;
+      font-weight: 600;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #b8d4bc;
+      margin-bottom: 16px;
+    }
+    .page-header h1 {
+      font-size: clamp(1.8rem, 4vw, 2.8rem);
+      font-weight: normal;
+      color: #fff;
+    }
+
+    /* ── Author section ── */
+    .author-section {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 72px 24px 80px;
+    }
+    .author-layout {
+      display: grid;
+      grid-template-columns: 320px 1fr;
+      gap: 56px;
+      align-items: start;
+    }
+    .author-photo-wrap {
+      position: sticky;
+      top: 80px;
+    }
+    .author-photo {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 8px 40px rgba(0,0,0,.18);
+      display: block;
+    }
+    .author-photo-cap {
+      font-family: -apple-system, sans-serif;
+      font-size: 12px;
+      color: var(--muted);
+      text-align: center;
+      margin-top: 12px;
+      letter-spacing: 0.04em;
+    }
+    .author-bio .eyebrow {
+      font-family: -apple-system, sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 14px;
+    }
+    .author-bio h2 {
+      font-size: clamp(1.5rem, 3vw, 2rem);
+      font-weight: normal;
+      color: var(--green);
+      margin-bottom: 28px;
+      line-height: 1.3;
+    }
+    .author-bio p {
+      font-size: 17px;
+      color: #3a3330;
+      margin-bottom: 20px;
+      line-height: 1.85;
+    }
+    .author-links {
+      margin-top: 36px;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 14px;
+    }
+    .btn-green {
+      display: inline-block;
+      background: var(--green);
+      color: #fff;
+      text-decoration: none;
+      font-family: -apple-system, sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 12px 28px;
+      border-radius: 8px;
+      letter-spacing: 0.03em;
+      transition: opacity .15s, transform .15s;
+    }
+    .btn-green:hover { opacity: .88; transform: translateY(-1px); }
+    .btn-outline {
+      display: inline-block;
+      background: transparent;
+      color: var(--green);
+      border: 2px solid var(--green);
+      text-decoration: none;
+      font-family: -apple-system, sans-serif;
+      font-size: 14px;
+      font-weight: 600;
+      padding: 10px 28px;
+      border-radius: 8px;
+      letter-spacing: 0.03em;
+      transition: background .15s, color .15s;
+    }
+    .btn-outline:hover { background: var(--green); color: #fff; }
+
+    /* ── Footer ── */
+    footer {
+      background: var(--ink);
+      color: rgba(255,255,255,.45);
+      padding: 32px 24px;
+      text-align: center;
+      font-family: -apple-system, sans-serif;
+      font-size: 13px;
+      line-height: 1.7;
+    }
+    footer a { color: rgba(255,255,255,.6); text-decoration: none; }
+    footer a:hover { color: #fff; }
+
+    @media (max-width: 680px) {
+      .author-layout { grid-template-columns: 1fr; gap: 36px; }
+      .author-photo-wrap { position: static; max-width: 280px; margin: 0 auto; }
+      .author-section { padding: 48px 20px 60px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Nav -->
+  <nav>
+    <div class="nav-left">
+      <a href="index.html" class="nav-brand">A Fine Fig Affair</a>
+      <a href="about.html" class="nav-link active">About the Author</a>
+    </div>
+    <a href="https://amzn.to/4yaJIZp" target="_blank" rel="noopener" class="nav-cta">Buy on Amazon</a>
+  </nav>
+
+  <!-- Page header -->
+  <div class="page-header">
+    <p class="eyebrow">The Person Behind the Recipes</p>
+    <h1>About the Author</h1>
+  </div>
+
+  <!-- Author bio -->
+  <section class="author-section">
+    <div class="author-layout">
+
+      <div class="author-photo-wrap">
+        <img src="author.jpg" alt="Teri Viduna, author of A Fine Fig Affair" class="author-photo">
+        <p class="author-photo-cap">Teri Viduna</p>
+      </div>
+
+      <div class="author-bio">
+        <p class="eyebrow">About the Author</p>
+        <h2>Teri Viduna</h2>
+        <p>
+          Teri Viduna has spent a lifetime combining creativity, communication, and design. With degrees
+          in Journalism and Graphic Design, she built a successful business career while never losing sight
+          of her dream of becoming an author.
+        </p>
+        <p>
+          After retiring from the business world, Teri dedicated herself to what she loves most — writing
+          and creating books that inspire, entertain, educate, and bring people together. Her work reflects a
+          wide range of interests, including friendship, family, creativity, coloring books, hobbies, travel,
+          cooking, and the simple joys that make life meaningful.
+        </p>
+        <p>
+          Drawing on her background in storytelling, design, and publishing, Teri creates books that are
+          both visually engaging and enjoyable to read. Whether she's sharing heartfelt reflections,
+          practical guides, whimsical adventures, or creative projects, her goal is always the same: to
+          encourage people to laugh more, connect more deeply, and celebrate everyday moments.
+        </p>
+        <p>
+          When she's not writing, Teri enjoys spending time with family and friends, creating new
+          projects, exploring creative pursuits, and turning ideas into books.
+        </p>
+        <p>All of Teri's books are available for purchase on Amazon.</p>
+
+        <div class="author-links">
+          <a href="https://www.2atcreations.com/" target="_blank" rel="noopener" class="btn-green">Visit 2aT Creations →</a>
+          <a href="https://amzn.to/4yaJIZp" target="_blank" rel="noopener" class="btn-outline">Buy A Fine Fig Affair</a>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 2aT Creations &nbsp;·&nbsp; <em>A Fine Fig Affair</em></p>
+    <p style="margin-top:6px;"><a href="https://www.2atcreations.com/" target="_blank" rel="noopener">www.2atcreations.com</a></p>
+  </footer>
+
+</body>
+</html>
