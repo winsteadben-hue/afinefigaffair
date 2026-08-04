@@ -183,6 +183,88 @@
     }
     .btn-outline:hover { background: var(--green); color: #fff; }
 
+    /* ── More from the Author ── */
+    .more-section {
+      background: var(--green-lt);
+      border-top: 1px solid var(--border);
+      padding: 72px 24px 80px;
+    }
+    .more-inner {
+      max-width: 860px;
+      margin: 0 auto;
+    }
+    .more-inner .eyebrow {
+      font-family: -apple-system, sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 14px;
+    }
+    .more-inner h2 {
+      font-size: clamp(1.4rem, 3vw, 2rem);
+      font-weight: normal;
+      color: var(--green);
+      margin-bottom: 40px;
+    }
+    .fig-quote {
+      border-left: 4px solid var(--amber);
+      padding: 20px 28px;
+      background: #fff;
+      border-radius: 0 10px 10px 0;
+      margin-bottom: 52px;
+      box-shadow: 0 2px 12px rgba(0,0,0,.06);
+    }
+    .fig-quote p {
+      font-size: 17px;
+      color: #3a3330;
+      line-height: 1.85;
+      font-style: italic;
+    }
+    .jam-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+      align-items: center;
+    }
+    .jam-photo {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 6px 28px rgba(0,0,0,.14);
+      display: block;
+    }
+    .jam-label-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+    }
+    .jam-label {
+      width: 100%;
+      max-width: 280px;
+      border-radius: 10px;
+      box-shadow: 0 4px 20px rgba(0,0,0,.15);
+      display: block;
+    }
+    .jam-text h3 {
+      font-size: 1.3rem;
+      font-weight: normal;
+      color: var(--green);
+      margin-bottom: 10px;
+    }
+    .jam-text p {
+      font-family: -apple-system, sans-serif;
+      font-size: 14px;
+      color: var(--muted);
+      line-height: 1.65;
+    }
+
+    @media (max-width: 640px) {
+      .jam-layout { grid-template-columns: 1fr; }
+      .jam-label-wrap { flex-direction: row; flex-wrap: wrap; justify-content: center; }
+    }
+
     /* ── Footer ── */
     footer {
       background: var(--ink);
@@ -261,6 +343,37 @@
         </div>
       </div>
 
+    </div>
+  </section>
+
+  <!-- More from the Author -->
+  <section class="more-section">
+    <div class="more-inner">
+      <p class="eyebrow">More from the Author</p>
+      <h2>A Love Letter to Fig Season</h2>
+
+      <div class="fig-quote">
+        <p>
+          There is something truly special about fig season. For a few precious weeks each year, the trees
+          are heavy with sweet, sun-ripened fruit, inviting us into the kitchen to create jars of homemade
+          jam and treasured family recipes. Although the harvest is brief, the rich, honey-like flavor of
+          fresh figs can be enjoyed all year long through every spoonful of jam, every warm dessert, every
+          savory glaze, and every shared meal. Even better than making these recipes is sharing them —
+          with family, friends, and neighbors — because a jar of homemade fig jam is more than a gift; it's
+          a delicious reminder that the sweetest moments in life are meant to be shared.
+        </p>
+      </div>
+
+      <div class="jam-layout">
+        <img src="figs-photo.jpeg" alt="Teri Viduna with a fresh harvest of figs" class="jam-photo">
+        <div class="jam-label-wrap">
+          <img src="vg-jam.jpeg" alt="Very Good Jam — Jalapeno Strawberry Fig Jam label" class="jam-label">
+          <div class="jam-text">
+            <h3>Very Good Jam</h3>
+            <p>Jalapeno Strawberry Fig Jam — one of Teri's favorite creations from the fig tree to the jar. A little sweet, a little heat, and a whole lot of love.</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 
