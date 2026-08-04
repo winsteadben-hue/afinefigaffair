@@ -222,47 +222,52 @@
       line-height: 1.85;
       font-style: italic;
     }
-    .jam-layout {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 40px;
-      align-items: center;
+    .figs-photo-wrap {
+      text-align: center;
+      margin-bottom: 40px;
     }
-    .jam-photo {
+    .figs-photo {
       width: 100%;
+      max-width: 480px;
       border-radius: 12px;
       box-shadow: 0 6px 28px rgba(0,0,0,.14);
-      display: block;
+      display: inline-block;
     }
-    .jam-label-wrap {
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      gap: 20px;
+    .figs-photo-cap {
+      font-family: -apple-system, sans-serif;
+      font-size: 13px;
+      color: var(--muted);
+      margin-top: 12px;
+      font-style: italic;
     }
-    .jam-label {
-      width: 100%;
-      max-width: 280px;
+    .jam-callout {
+      background: #fff;
       border-radius: 10px;
-      box-shadow: 0 4px 20px rgba(0,0,0,.15);
-      display: block;
+      border: 1px solid var(--border);
+      padding: 28px 32px;
+      max-width: 560px;
+      margin: 0 auto;
     }
-    .jam-text h3 {
+    .jam-callout-label {
+      font-family: -apple-system, sans-serif;
+      font-size: 11px;
+      font-weight: 700;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: var(--amber);
+      margin-bottom: 8px;
+    }
+    .jam-callout h3 {
       font-size: 1.3rem;
       font-weight: normal;
       color: var(--green);
       margin-bottom: 10px;
     }
-    .jam-text p {
+    .jam-callout p {
       font-family: -apple-system, sans-serif;
-      font-size: 14px;
+      font-size: 15px;
       color: var(--muted);
       line-height: 1.65;
-    }
-
-    @media (max-width: 640px) {
-      .jam-layout { grid-template-columns: 1fr; }
-      .jam-label-wrap { flex-direction: row; flex-wrap: wrap; justify-content: center; }
     }
 
     /* ── Footer ── */
@@ -364,15 +369,15 @@
         </p>
       </div>
 
-      <div class="jam-layout">
-        <img src="figs-photo.jpeg" alt="Teri Viduna with a fresh harvest of figs" class="jam-photo">
-        <div class="jam-label-wrap">
-          <img src="vg-jam.jpeg" alt="Very Good Jam — Jalapeno Strawberry Fig Jam label" class="jam-label">
-          <div class="jam-text">
-            <h3>Very Good Jam</h3>
-            <p>Jalapeno Strawberry Fig Jam — one of Teri's favorite creations from the fig tree to the jar. A little sweet, a little heat, and a whole lot of love.</p>
-          </div>
-        </div>
+      <div class="figs-photo-wrap">
+        <img src="figs-photo.jpeg" alt="Teri Viduna with a fresh harvest of figs" class="figs-photo">
+        <p class="figs-photo-cap">Fresh from the fig tree — ready for the kitchen.</p>
+      </div>
+
+      <div class="jam-callout">
+        <p class="jam-callout-label">Also from Teri</p>
+        <h3>Very Good Jam</h3>
+        <p>Jalapeno Strawberry Fig Jam — one of Teri's favorite creations from the fig tree to the jar. A little sweet, a little heat, and a whole lot of love.</p>
       </div>
     </div>
   </section>
